@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" slyle="display:flex;flex:1;">
+<html lang="en" style="display:flex;flex:1;">
     <head>
         
         <meta charset="UTF-8">
@@ -22,7 +22,7 @@
     <body>
             
         <nav class="header">
-            <a class="left-section" href="#home_page">
+            <a class="left-section" href="#home_page" >
                 <img src="PNG6-1024x383-removebg-preview.png" style="width:200px;">
             </a>
             <div class="right-section" id="rs">
@@ -32,10 +32,21 @@
                 <div><a class="head-el" href="#projects">Projects</a></div>
                 <div><a class="head-el" href="#resume">Resume</a></div>
                 <div><a class="head-el" href="#contact">Contact</a></div>
+                <div class="menu-class" onclick="showMenu()">
+                    <a><img src="download2.png" style="width:50px;"></a>
+                </div>
             </div>
-            <div class="menu-class">
-                <a><img src="mennu.svg">Menu</a>
+        </nav>
+        <nav class="header2">
+            <div class="menu-class" onclick="hideMenu()">
+                <a><img src="icons8-close-window-50.png"></a>
             </div>
+            <div><a class="head-el" href="#home_page">Home</a></div>
+            <div><a class="head-el" href="#About">About</a></div>
+            <div><a class="head-el" href="#Skills">Skills</a></div>
+            <div><a class="head-el" href="#projects">Projects</a></div>
+            <div><a class="head-el" href="#resume">Resume</a></div>
+            <div><a class="head-el" href="#contact">Contact</a></div>
         </nav>
         <a class="scroll-up" href="#home_page">
             <span style="font-size: 40px;">&#8682;</span>
@@ -46,7 +57,7 @@
                     <p class="welcome-div"><span style="color:hsl(0, 19%, 88%)">Hi !!</span><br><span style="color:hsl(0, 19%, 88%)"> My name is</span><br><span style="color:#fafafa"><strong>DEMBELE &nbsp;Moussa</strong></span></p>
                 </div>
                 <div style="display:flex;justify-content: center;align-items: center;">
-                    <button onclick="window.location.href='#contact'">
+                    <button onclick="window.location.href='#contact'" style="text-wrap: nowrap;color:white;border:none;">
                         Contact me
                     </button>
                     <a  target="_blank" href="https://github.com/Md123etplus"><button style="padding:10px; background-color: rgb(196, 232, 229);"><img style="width: 20%;padding:0;margin:0;" src="download-removebg-preview (2).png"></a></button></a>
@@ -68,7 +79,7 @@
                     <p>I am a Computer Science Engineering student passionate about technological innovation.<br>In training to become an engineer, I put my skills in front-end/back-end development into practice through concrete projects.<br><strong>My ambition ?</strong><br>Transform ideas into impactful IT solutions.<br>Explore my portfolio to see my work and do not hesitate to contact me to discuss possible opportunities.<br> Together, let's create the future!</p>
                 </div>
                 <div class="resume-redirect">
-                    <button onclick="window.open('https://drive.google.com/file/d/16zU4USnCrpjw7iKTC2P49N1_Y8fmQzWt/view?usp=drive_link', '_blank')" class="telecharger-cv">
+                    <button style="color:white;border:none;" onclick="window.open('https://drive.google.com/file/d/16zU4USnCrpjw7iKTC2P49N1_Y8fmQzWt/view?usp=drive_link', '_blank')" class="telecharger-cv">
                         <strong>Download my CV</strong>
                     </button>
                     <div class="youtube">
@@ -79,7 +90,7 @@
                 
             </div>
         </section>
-        <span class="skill-text" id="Skills">Skills</span>
+        <div class="skill-text" id="Skills">Skills</div>
         <section class="Skills" >
             <section class="Skills-left">
                 <div class="skill-bar">
@@ -247,11 +258,19 @@
         <footer class="footer">
             <p>Copyright &copy; 2024. All rights reserved.</p>
         </footer>
-        
-        <!-- 
-<div class="redirect" style="word-spacing:5px;">
-            SCROLL DOWN <br> &#129147;
-        </div>
-        -->
+        <script>
+            function showMenu(){
+                const header = document.querySelector('.header2');
+                const head = document.querySelector('.right-section');
+                header.style.display='flex';
+                head.style.display='none';
+            }
+            function hideMenu(){
+                const header = document.querySelector('.header2');
+                const head = document.querySelector('.right-section');
+                header.style.display='none';
+                head.style.display='flex';
+            }
+        </script>
     </body>
 </html>
